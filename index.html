@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aniket Study Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:white;padding:28px 18px;text-align:center}
+header h1{margin:0 0 8px;font-size:30px}header p{margin:0;opacity:.9}
+.container{max-width:900px;margin:auto;padding:18px}
+.search{width:100%;padding:14px 16px;border:0;border-radius:14px;box-shadow:0 3px 15px #0001;font-size:16px;margin-bottom:20px}
+h2{margin:18px 0 12px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:white;border-radius:16px;padding:20px;text-decoration:none;color:#172033;box-shadow:0 3px 12px #0000000d;border:1px solid #e9eaf0}
+.card b{font-size:20px}.card span{display:block;color:#687386;margin-top:6px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.feature{background:white;border-radius:16px;padding:18px;text-align:center;border:1px solid #e9eaf0}
+footer{text-align:center;padding:28px;color:#687386}
+@media(max-width:600px){.features{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>📚 Aniket Study Hub</h1>
+<p>Class 9 • 10 • 11 • 12 | पढ़ो, सीखो और आगे बढ़ो</p>
+</header>
+<div class="container">
+<input class="search" id="search" placeholder="🔍 Subject या Class खोजें...">
+<h2>अपनी Class चुनें</h2>
+<div class="grid" id="classes">
+<a class="card" href="#"><b>📘 Class 9</b><span>Notes • Questions • Quiz</span></a>
+<a class="card" href="#"><b>📗 Class 10</b><span>Notes • Questions • Quiz</span></a>
+<a class="card" href="#"><b>📙 Class 11</b><span>Notes • Questions • Quiz</span></a>
+<a class="card" href="#"><b>📕 Class 12</b><span>Notes • Questions • Quiz</span></a>
+</div>
+<h2>Study Section</h2>
+<div class="features">
+<div class="feature">📝<br><b>Important Questions</b></div>
+<div class="feature">📖<br><b>Notes</b></div>
+<div class="feature">🧠<br><b>Quiz</b></div>
+</div>
+</div>
+<footer>© 2026 Aniket Study Hub</footer>
+<script>
+const input=document.getElementById('search');
+input.addEventListener('input',()=>{const q=input.value.toLowerCase();document.querySelectorAll('#classes .card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none')});
+</script>
+</body>
+</html>
